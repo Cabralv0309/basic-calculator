@@ -25,3 +25,7 @@ _CSS styling_ e _event handling_.
 ## Como utilizar localmente
 
 Já que este projeto foi feito utilizando HTML e JS, não é necessário instalar nenhuma dependência.
+
+### Live Demo
+
+Teste a calculadora [clicando aqui](https://cabralv0309.github.io/basic-calculator/)
