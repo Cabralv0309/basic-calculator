@@ -1,0 +1,83 @@
+html{
+    font-size: 16px; /*1em*/
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    background-image: radial-gradient(circle, #F0E7D5 0%, #E0CEA9 100%);
+}
+.calculadora {
+    border: none;
+    border-radius: 1rem;
+
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    max-width: 360px;
+    min-width: 220px;
+    aspect-ratio: 3 / 4;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #232326;
+    box-shadow: 0px 0px 10px  rgba(0,0,0,0.5);
+}
+#display {
+    flex: 1;
+    background-color: #7A7E85;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 1rem;
+
+    color: white;
+    padding-right: 0.4rem;
+    font-size: 3.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.buttons {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+.buttons button{
+    background-color: #152A4D;
+    border-radius: 0.5em;
+    border: none;
+
+    color: white;
+    font-size: 1.5em;
+}
+.buttons button:hover{
+    background-color: #1C154D;
+    cursor: pointer;
+}
+.buttons button:active{
+    transform: scale(0.9);
+    transition: transform 0.1s ease-out;
+}
+.buttons button:not(.number):not(#comma) {
+    background-color: #1C154D;
+}
+.buttons button:not(.number):not(#comma):hover {
+    background-color: #152A4D;
+    cursor: pointer;
+}
+#zero {
+    grid-column: span 2;
+}
+.buttons button#equals:not(.number):not(#comma) {
+    background-color: #4D3815;
+}
+.buttons button#equals:not(.number):not(#comma):hover {
+    background-color: #533F1F;
+}
