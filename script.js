@@ -64,13 +64,18 @@ comma.addEventListener('click', () => {
     }
 })
 
-//percetn logic
+//percent logic
 const percent = document.getElementById('percent');
 percent.addEventListener('click', () => {
     let memory = display.innerText.split(/([\+\-x÷])/);
-    if (memory[memory.length-1]!==''){
-        memory[memory.length-1] = Number(memory[memory.length-1])/100;
+    let lastNumber = memory.at(-1);
+    
+    if (lastNumber !== '') {
+        lastNumber = lastNumber.replace(',','.');
+        lastNumber = Number(lastNumber)/100;
+        lastNumber = String(lastNumber).replace('.',',');
     }
+    memory[memory.length-1] = lastNumber;
     display.innerText = memory.join('');
 })
 
